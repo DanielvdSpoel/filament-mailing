@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Account;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -13,11 +14,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        Account::factory()->create([
+            'name' => 'DanielvdSpoel',
+        ])->users()->attach(
+            User::factory()->create([
+                'name' => 'Daniël van der Spoel',
+                'email' => 'contact@danielvdspoel.nl',
+            ])
+        );
 
-         User::factory()->create([
-             'name' => 'Daniël van der Spoel',
-             'email' => 'contact@danielvdspoel.nl',
-         ]);
+        $this->call([
+            InboxTemplateSeeder::class,
+        ]);
     }
 }

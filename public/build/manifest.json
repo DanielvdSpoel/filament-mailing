@@ -4,10 +4,15 @@
     "isEntry": true,
     "src": "resources/css/app.css"
   },
-  "resources/css/filament/admin/theme.css": {
-    "file": "assets/theme-384447bb.css",
+  "resources/css/filament/account/theme.css": {
+    "file": "assets/theme-f90a04d0.css",
     "isEntry": true,
-    "src": "resources/css/filament/admin/theme.css"
+    "src": "resources/css/filament/account/theme.css"
+  },
+  "resources/css/filament/admin/theme.css": {
+    "file": "assets/theme-f90a04d0.css",
+    "isEntry": true,
+    "src": "resources/css/filament/account/theme.css"
   },
   "resources/js/app.js": {
     "file": "assets/app-dbe23e4c.js",
