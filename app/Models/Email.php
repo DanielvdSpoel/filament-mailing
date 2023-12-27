@@ -13,6 +13,10 @@ class Email extends Model
 
     protected $fillable = [
         'subject',
+        'message_uid',
+        'inbox_id',
+        'text_body',
+        'html_body',
     ];
 
     public function inbox(): BelongsTo

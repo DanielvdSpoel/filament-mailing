@@ -11,6 +11,9 @@ return new class extends Migration {
         Schema::create('emails', function (Blueprint $table) {
             $table->id();
             $table->string('subject');
+            $table->string('message_uid');
+            $table->text('text_body')->nullable();
+            $table->text('html_body')->nullable();
             $table->foreignIdFor(Inbox::class)->constrained()->cascadeOnDelete();
             $table->softDeletes();
             $table->timestamps();

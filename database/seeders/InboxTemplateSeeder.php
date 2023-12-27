@@ -35,7 +35,7 @@ class InboxTemplateSeeder extends Seeder
             'smtp_encryption' => 'tls',
         ]);
 
-        InboxTemplate::updateOrCreate([
+        $template = InboxTemplate::updateOrCreate([
             'name' => 'Soverin',
         ], [
             'imap_host' => 'imap.soverin.net',
@@ -45,6 +45,7 @@ class InboxTemplateSeeder extends Seeder
             'smtp_port' => '465',
             'smtp_encryption' => 'ssl',
         ]);
+
     }
 
 }
